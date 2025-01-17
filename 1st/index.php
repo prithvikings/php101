@@ -1,13 +1,10 @@
-<?php
-
-echo "My first program in PHP";
-for($i=0;$i<10;$i++)
-{
-    if($i%2==0){
-        echo "\nEven number: $i\n";
-    }else{
-        echo "Odd number: $i\n";
-    }
-}
+<?php 
+echo "Enter the first number: ";
+$num1=fgets(STDIN);
+echo "Enter the second number: ";
+$num2=fgets(STDIN);
+$sum=$num1+$num2;
+echo `The sum of the two numbers is: $sum \n` ;
+echo gettype($sum);
 
 ?>
