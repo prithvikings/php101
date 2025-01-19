@@ -66,6 +66,20 @@ else{
     $total=atan($x); //atan() is a built-in function that returns the arctangent of a number
     echo "The arctangent of {$x} is {$total} <br>";
 
+    $total=pi(); //pi() is a built-in function that returns the value of pi
+    echo "The value of pi is {$total} <br>";
+
+    $total=rand(1,10); //rand() is a built-in function that generates a random number
+    echo "A random number between 1 and 10 is {$total} <br>";
+
+    $total=max(1,2,3,4,5); //max() is a built-in function that returns the highest value in a list of numbers
+    echo "The maximum value is {$total} <br>";
+
+    $total=min(1,2,3,4,5); //min() is a built-in function that returns the lowest value in a list of numbers
+    echo "The minimum value is {$total} <br>";
+
+    $total=pow($x,2); //pow() is a built-in function that returns the value of a number raised to the power of another number
+    echo "The square of {$x} is {$total} <br>";
 }
 echo "The square of {$x} is ".($x*$x);
 ?>
