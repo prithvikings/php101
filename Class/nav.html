@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrithik Sir Class</title>
+    <style>
+        .main{
+            height: 640px;
+            width: 1000px;
+            border:1px solid black;
+        }
+        .empty{
+            height: 100px;
+            width: 1000px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 40px;
+            margin: 0;
+        }
+        nav h3{
+            margin: 0;
+            text-align: center;
+            font-family: poppins;
+            font-weight: 500;
+            color: palevioletred;
+            border: 1px solid black;
+            width: 200px;
+            height: 40px;
+            align-content: center;
+        }
+        .hero{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: yellow; */
+            height: 200px;
+            width: 1000px;
+            margin: 0;
+        }
+        .side-nav{
+            width: 250px;
+            /* border: 2px solid black; */
+            margin: 0;
+            /* background: #000; */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 200px;
+        }
+        .side-nav h3{
+            border: 1px solid black;
+            height: 40px;
+            /* background-color: aliceblue; */
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            align-content: center;
+            font-weight: 400;
+            font-family: poppins;
+        }
+        .hero-img{
+            width: 750px;
+            margin: 0;
+            height: 200px;
+        }
+        .hero-img img{
+            object-fit: cover;
+            object-position: center;
+            height: 200px;
+            width: 750px;
+        }
+        .our-client{
+            height: 150px;
+            width: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .our-client h1{
+            font-family: poppins;
+            font-weight: 550;
+            font-size: xx-large;
+        }
+        .client-img{
+            height: 100px;
+            width: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .client-img img{
+            width: 330px;
+            margin: 0;
+            height: 100px;
+            border: 1px solid black;
+        }
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: blue; */
+            gap: 10px;
+            margin: 0;
+        }
+        .client-img div img{
+            object-fit: contain;
+            object-position: center;
+            width: 330px;
+            height: 100px;
+        }
+        footer h3{
+            
+            font-family: poppins;
+            font-size: large;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="empty"></div>
+        <nav>
+            <h3>Home</h3>
+            <h3>About</h3>
+            <h3>Course</h3>
+            <h3>Gallery</h3>
+            <h3>Contact us</h3>
+        </nav>
+        <div class="hero">
+            <div class="side-nav">
+                <h3>Home</h3>
+                <h3>About</h3>
+                <h3>Course</h3>
+                <h3>Gallery</h3>
+            <h3>Contact us</h3>
+
+            </div>
+            <div class="hero-img">
+                <img src="https://i.ytimg.com/vi/8LbCmtAAMYE/maxresdefault.jpg" alt="">
+            </div>
+        </div>
+        <div class="client">
+            <div class="our-client">
+                <h1>Our Clients</h1>
+            </div>
+            <div class="client-img">
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Indian_Election_Symbol_Cycle.png" alt="samajwadi">
+                </div>
+                <div>
+                    <img src="https://www.designerpeople.com/wp-content/uploads/2018/08/Free-Vector-EPS-Logo-Download-Bharatiya-Janata-Party-BJP.jpg" alt="bjp">
+                </div>
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Indian_National_Congress_hand_logo.png" alt="congress">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h3>Home |</h3>
+            <h3>About |</h3>
+            <h3>Course |</h3>
+            <h3>Gallery |</h3>
+            <h3>Contact us</h3>
+        </footer>
+    </div>
+</body>
+</html>
+
