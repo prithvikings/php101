@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($password != $cpassword) {
         echo '<script>alert("Password and Confirm Password do not match"); window.location.href="../Pages/registration.php";</script>';
         exit;
-    }
+    }else{
 
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // }
 
     // Prepare SQL query
+    move_uploaded_file($image_path, "../Images/" . $image);
     $sql = "INSERT INTO `users` (`username`, `password`, `phone`, `image`, `std`, `votes`, `status`) 
             VALUES ('$username', '$hashed_password', '$phone', '$image', '$std', 0, 0)";
 
@@ -43,5 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo '<script>alert("Registration Failed"); window.location.href="../Pages/registration.php";</script>';
     }
+
+}
 }
 ?>

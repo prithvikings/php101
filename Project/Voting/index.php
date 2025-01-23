@@ -29,7 +29,7 @@
       <h2 class="text-center text-2xl font-bold mt-10">
         Login
       </h2>
-      <form action="">  
+      <form action="./action/login.php" method="POST">  
         <div class="">
           
           <label for="username" class="block text-l font-medium ">Username</label>
