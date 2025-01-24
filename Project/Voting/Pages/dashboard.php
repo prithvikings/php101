@@ -26,6 +26,10 @@ $votes = isset($_SESSION['votes']) ? $_SESSION['votes'] : [];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Voting System - Dashboard</title>
     <style>
@@ -49,10 +53,10 @@ $votes = isset($_SESSION['votes']) ? $_SESSION['votes'] : [];
     <div class="max-w-6xl mx-auto">
         <div class="flex justify-between items-center mb-8">
             <a href="../" class="flex items-center bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition ease-in-out duration-300">
-                <span class="material-icons">arrow_back</span>
+            <i class="ri-arrow-left-circle-line text-2xl"></i>
                 <span class="ml-2 font-semibold">Back</span>
             </a>
-            <a href="./logout.php" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition ease-in-out duration-300">
+            <a href="./logout.php" class="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition ease-in-out duration-300 font-semibold text-xl">
                 Logout
             </a>
         </div>
