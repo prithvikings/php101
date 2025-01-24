@@ -1,18 +1,15 @@
 <?php
-$db_server="localhost:3309";
-$db_username="root";
-$db_password="";
-$db_name="votingsystem";
-$conn="";
+session_start();
 
+$servername = "localhost:3309"; // or 127.0.0.1
+$username = "root";        // MySQL username (default is root)
+$password = "";            // MySQL password (empty by default in XAMPP)
+$dbname = "votingsystem"; // Your database name
 
-try{
-    $conn =  mysqli_connect($db_server, $db_username, $db_password, $db_name);
-}catch(Exception $e){
-    echo "Error: ".$e->getMessage();
-}
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-if(!$conn){
-    echo "You are not connected to the database";
+// Check for connection errors
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
