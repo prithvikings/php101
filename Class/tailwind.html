@@ -1,44 +1,68 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    <style>
-        * {
-            font-family: poppins;
-        }
-        main{
-            height: 100%;
-            width: 100%;
-        }
-    </style>
+    <title>Instagram Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <main class="bg-[#030712] text-white flex items-center justify-center h-screen w-screen min-h-screen">
-        <div class="container mx-auto  ">
-            <h1 class="text-4xl font-bold mt-10">@tailwindcss/typography <i class="ri-github-fill text-3xl"></i></h1>
-            <p class="text-lg mt-2 text-slate-400">Beautiful typography for your Tailwind CSS projects.</p>
+  <body class="flex items-center justify-center min-h-screen bg-white ">
+    <div class="w-96  bg-gradient-to-b from-purple-500 to-red-500 text-white p-6 rounded-xl shadow-lg">
+      <h1 class="text-center text-3xl font-bold mb-6 ">Instagram</h1>
 
-            <p class="w-2xl mt-5 text-slate-400">The @tailwindcss/typography plugin adds a set of customizable prose classes that you can use to add beautiful typographic defaults to any vanilla HTML, like the output you'd get after parsing some Markdown, or content you pull from a CMS.</p>
-
-            <div class="w-4xl rounded-lg bg-gray-200 p-10 mt-10 h-auto section mx-auto">
-                <div class="prose text-black bg-white p-10 mx-auto w-2xl textsection"> 
-                <h1 class="font-bold text-3xl mt-4">Typography Should be easy.</h1>
-                <p class="mt-10 font-medium">The @tailwindcss/typography plugin is a great way to style your prose content without adding any CSS. Just add the plugin to your project and use the prose classes to style your content.</p>
-                <p class="mt-4">The plugin includes a set of default styles that you can customize to match your brand. You can also use the typography classes to create custom styles for your content.</p>
-
-                <p class="mt-4">The plugin includes a set of default styles that you can customize to match your brand. You can also use the typography classes to create custom styles for your content.</p>
-
-                <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, placeat tempore cumque, corporis suscipit nisi non autem expedita id ea dolores consequatur maxime ipsam nihil.</p>
-                <p class="mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam cum ipsa culpa nisi temporibus quibusdam sint aliquam, dolore rerum, odio necessitatibus eaque omnis! Amet dignissimos nisi eligendi alias cupiditate officiis dolor itaque asperiores eos?</p>
-                </div>
-            </div>
+      <form class="space-y-4 ">
+        <input
+          type="text"
+          placeholder="Phone number, username or email address"
+          class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <div class="relative ">
+          <input
+            type="password"
+            placeholder="Password"
+            class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="button"
+            class="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400 hover:text-gray-200"
+          >
+            👁️
+          </button>
         </div>
-    </main>
+        <a
+          href="#"
+          class="text-sm text-blue-500 hover:underline block text-right"
+          >Forgotten password?</a
+        >
+        <button
+          type="submit"
+          class="w-full bg-blue-500 py-2 rounded-md text-white text-sm font-bold hover:bg-blue-600"
+        >
+          Log In
+        </button>
+      </form>
+
+      <div class="flex items-center my-4">
+        <hr class="flex-1 border-gray-600" />
+        <span class="mx-4 text-sm text-gray-400">OR</span>
+        <hr class="flex-1 border-gray-600" />
+      </div>
+
+      <button
+        class="flex items-center justify-center w-full bg-transparent py-2 text-blue-500 hover:underline"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="Facebook Logo"
+          class="w-5 h-5 mr-2"
+        />
+        Log in with Facebook
+      </button>
+
+      <p class="text-center mt-4 text-sm text-gray-400">
+        Don't have an account?
+        <a href="#" class="text-blue-500 hover:underline">Sign Up</a>
+      </p>
+    </div>
   </body>
 </html>
