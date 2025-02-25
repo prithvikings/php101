@@ -6,7 +6,7 @@
     <title>Get and Post</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="2get_post.php" method="post">
         <label >UserName: </label>
         <input type="text" name="username" placeholder="Enter your username"><br>
         <label >Password: </label>
@@ -37,7 +37,18 @@ $_POST = Data is a packaged inside the body of the HTTP request
 
 //in get method, the data is sent through the URL and can be seen in the URL bar of the browser while in post method, the data is sent through the body of the HTTP request and cannot be seen in the URL bar of the browser.
 */
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $username = isset($_POST['username']) ? $_POST['username'] : '';
+//     $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-echo "{$_POST['username']}<br>";
-echo "{$_POST['password']}<br>";
+//     if (!empty($username) && !empty($password)) {
+//         echo "Data received successfully <br>";
+//         echo "Username: $username <br>";
+//         echo "Password: $password <br>";
+//     } else {
+//         echo "Please enter both username and password.";
+//     }
+// }
+echo "{$_POST['username']} <br>";
+echo "{$_POST['password']} <br>";
 ?>

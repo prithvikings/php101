@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="forloop.php" method="post">
+    <form action="6forloop.php" method="post">
         <label for="">Enter a number to count to: </label>
         <input type="text" name="counter">
         <input type="submit" value="Submit">

@@ -4,7 +4,7 @@ $marks=array(90,80,70);
 
 //array_combine() function is used to create a new array by combining two arrays.
 $c=array_combine($name,$marks);
-print_r($c);
+// print_r($c);
 
 //array_chunk() function is used to split an array into parts.
 $courses=array("PHP","JAVA","C++","PYTHON","C#","HTML");

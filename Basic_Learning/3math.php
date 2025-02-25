@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="math.php" method="post">
+    <form action="3math.php" method="post">
         <label>x:</label>
         <input type="text" name="x" id="">
         <input type="submit" value="submit">
@@ -78,8 +78,6 @@ else{
     $total=min(1,2,3,4,5); //min() is a built-in function that returns the lowest value in a list of numbers
     echo "The minimum value is {$total} <br>";
 
-    $total=pow($x,2); //pow() is a built-in function that returns the value of a number raised to the power of another number
-    echo "The square of {$x} is {$total} <br>";
 }
 echo "The square of {$x} is ".($x*$x);
 ?>
