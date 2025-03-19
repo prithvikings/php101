@@ -29,11 +29,11 @@
                         </h2>
                         <img src="https://em-content.zobj.net/source/apple/391/smiling-face-with-sunglasses_1f60e.png" alt="" class="w-7 h-7 absolute left-28 top-[60%] transform -translate-y-1/2">
                     </div>
-                    <form class="space-y-4 relative">
+                    <form class="space-y-4 relative" action="../actions/login_back.php" method="POST">
                         <img src="https://em-content.zobj.net/source/apple/391/technologist-light-skin-tone_1f9d1-1f3fb-200d-1f4bb.png" alt="" class="absolute w-7 h-7 left-[-35px] top-[10%] transform -translate-y-1/2">
-                        <input type="text" placeholder="Username" class="w-full p-3 bg-gray-100 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <input type="text" name="username" placeholder="Username" class="w-full p-3 bg-gray-100 outline-none focus:ring-2 focus:ring-zinc-400">
                         <img src="https://em-content.zobj.net/source/apple/391/zipper-mouth-face_1f910.png" alt="" class="absolute w-7 h-7 left-[-35px] top-[42%] transform -translate-y-1/2">
-                        <input type="password" placeholder="Password" class="w-full p-3  bg-gray-100 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <input type="password" name="password" placeholder="Password" class="w-full p-3  bg-gray-100 outline-none focus:ring-2 focus:ring-zinc-400">
                         
                         <div class="flex items-center">
                                 <a href="#" class="text-sm hover:text-zinc-500 font-medium">Forget Password</a>

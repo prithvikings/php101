@@ -34,7 +34,7 @@
                   <form class="space-y-4 relative">
                     <img src="https://em-content.zobj.net/source/apple/391/smiling-face-with-hearts_1f970.png" alt="" class="w-7 h-7 absolute left-[-37px] top-[6.5%] transform -translate-y-1/2">
                     <label for="role">What describes you best?</label>
-                    <select id="role" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                    <select id="role" name="std_best" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                       <option value="" disabled selected>Select an option</option>
                       <option value="student">🎓 Student</option>
                       <option value="working">💼 Working Professional</option>
@@ -43,7 +43,7 @@
                     
                     <img src="https://em-content.zobj.net/source/apple/391/face-with-peeking-eye_1fae3.png" alt="" class="w-7 h-7 absolute left-[-37px] top-[18%] transform -translate-y-1/2">
                     <label for="age">What’s your age bracket?</label>
-                    <select id="age" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400 rounded-none">
+                    <select id="age" name="std_age" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400 rounded-none">
                       <option value="" disabled selected>Select your age</option>
                       <option value="under18" >🌱 Under 18</option>
                       <option value="18-25">🔥 18-25</option>
@@ -53,7 +53,7 @@
         
                     <img src="https://em-content.zobj.net/source/apple/391/face-in-clouds_1f636-200d-1f32b-fe0f.png" class="w-7 h-7 absolute left-[-37px] top-[29%] transform -translate-y-1/2" alt="">
                     <label for="forget-style">How do you usually forget things?</label>
-                    <select id="forget-style" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                    <select id="forget-style" name="std_usually" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                       <option value="" disabled selected>Pick your struggle 😆</option>
                       <option value="ignore">🤦‍♂️ I set reminders and still ignore them</option>
                       <option value="forget">😵‍💫 I don’t even remember to set reminders</option>
@@ -63,7 +63,7 @@
         
                     <img src="https://em-content.zobj.net/source/apple/391/melting-face_1fae0.png" class="w-7 h-7 absolute left-[-37px] top-[40.5%] transform -translate-y-1/2" alt="">
                     <label for="oops">What’s your most common “Oops! I forgot” moment?</label>
-                    <select id="oops" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                    <select id="oops" name="std_oops" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                       <option value="" disabled selected>Select your most common forgettable moment</option>
                       <option value="deadlines">📅 Deadlines & assignments</option>
                       <option value="birthdays">🎂 Birthdays & anniversaries</option>
@@ -74,7 +74,7 @@
         
                     <img src="https://em-content.zobj.net/source/apple/391/handshake_light-skin-tone_1f91d-1f3fb_1f3fb.png" class="w-7 h-7 absolute left-[-37px] top-[52%] transform -translate-y-1/2" alt="">
                     <label for="reminder-time">When do you want us to remind you?</label>
-                    <select id="reminder-time" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                    <select id="reminder-time" name="std-reminder" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                       <option value="" disabled selected>Select your preferred reminder time</option>
                       <option value="morning">🌅 Morning vibes (7 AM - 10 AM)</option>
                       <option value="midday">🌞 Midday focus (12 PM - 3 PM)</option>
@@ -84,7 +84,7 @@
         
                     <img src="https://em-content.zobj.net/source/apple/391/man-genie_1f9de-200d-2642-fe0f.png" class="w-7 h-7 absolute left-[-37px] top-[63%] transform -translate-y-1/2" alt="">
                     <label for="reminder-method">How do you want to receive reminders?</label>
-                    <select id="reminder-method" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                    <select id="reminder-method" name="std_method" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                       <option value="" disabled selected>Select your notification preference</option>
                       <option value="app">🔔 App notifications</option>
                       <option value="email">📩 Email alerts</option>
@@ -95,7 +95,7 @@
 
                     <img src="https://em-content.zobj.net/source/apple/391/nerd-face_1f913.png" class="w-7 h-7 absolute left-[-37px] top-[74%] transform -translate-y-1/2" alt="">
                     <label for="productivity">What’s your productivity vibe?</label>
-                    <select id="productivity" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                    <select id="productivity" name="std_productivity" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                       <option value="" disabled selected>Pick your productivity level</option>
                       <option value="organized">🎯 Super organized</option>
                       <option value="sometimes">😎 I get things done (eventually)</option>
@@ -103,7 +103,7 @@
                     </select>
         
                     <label for="important-thing">One thing you absolutely don’t want to forget?</label>
-                    <textarea id="important-thing" placeholder="Write here..." class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400"></textarea>
+                    <textarea id="important-thing" name="important" placeholder="Write here..." class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400"></textarea>
         
 
                     

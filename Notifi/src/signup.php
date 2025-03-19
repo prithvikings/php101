@@ -28,19 +28,19 @@
                             One step closer to an organized life—get started!
                         </h2>
                     </div>
-                    <form class="space-y-4 relative" action="./intro.html">
+                    <form class="space-y-4 relative" action="../actions/reg_back.php" method="POST">
                         <img src="https://em-content.zobj.net/source/apple/391/waving-hand_1f44b.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[12%] transform -translate-y-1/2">
                         <label for="" >What’s your good name?</label>
-                        <input type="text" placeholder="John Doe" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <input type="text" name="name" placeholder="John Doe" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                         <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[34%] transform -translate-y-1/2">
                         <label for="">Pick a cool username</label>
-                        <input type="text" placeholder="Username" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <input type="text" name="username" placeholder="Username" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                         <img src="https://em-content.zobj.net/source/apple/391/envelope-with-arrow_1f4e9.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[52%] transform -translate-y-1/2">
                         <label for="">Drop your best email</label>
-                        <input type="email" placeholder="Email" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <input type="email" name="email" placeholder="Email" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                         <img src="https://em-content.zobj.net/source/apple/391/locked_1f512.png" class="w-6 h-6 absolute left-[-35px] top-[74%] transform -translate-y-1/2" alt="">
                         <label for="">Set a strong password</label>
-                        <input type="password" placeholder="••••••••" class="w-full p-3 mt-2  bg-gray-200 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <input type="password" name="password" placeholder="••••••••" class="w-full p-3 mt-2  bg-gray-200 outline-none focus:ring-2 focus:ring-zinc-400">
                         
                         <div class="flex items-center">
                                 <a href="#" class="text-sm hover:text-zinc-500 font-medium">Forget Password</a>
