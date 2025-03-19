@@ -1,0 +1,59 @@
+<?php
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="bg-zinc-900 w-full min-h-screen text-white font-[mulish]">
+        <div class="w-full bg-amber-400 flex justify-between items-center h-screen">
+            <div class="img w-3/5 bg-sky-500 h-full">
+                <img src="../assets/login_bg_pattern_2.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="container-div w-full bg-zinc-300 h-full flex items-center justify-start px-32 relative">
+                <a href="./index.php" class=" text-3xl text-black absolute top-8 right-10">
+                    <i class="ri-close-line"></i>
+                </a>
+                <div class="bg-white p-12 pl-16 rounded-md w-xl flex flex-col gap-4 text-gray-700">
+                    <div class="w-full flex items-center relative">
+                        <h2 class="text-xl font-semibold font-[gilroy] text-gray-800 mb-4">
+                            One step closer to an organized life—get started!
+                        </h2>
+                    </div>
+                    <form class="space-y-4 relative" action="./intro.html">
+                        <img src="https://em-content.zobj.net/source/apple/391/waving-hand_1f44b.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[12%] transform -translate-y-1/2">
+                        <label for="" >What’s your good name?</label>
+                        <input type="text" placeholder="John Doe" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[34%] transform -translate-y-1/2">
+                        <label for="">Pick a cool username</label>
+                        <input type="text" placeholder="Username" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <img src="https://em-content.zobj.net/source/apple/391/envelope-with-arrow_1f4e9.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[52%] transform -translate-y-1/2">
+                        <label for="">Drop your best email</label>
+                        <input type="email" placeholder="Email" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
+                        <img src="https://em-content.zobj.net/source/apple/391/locked_1f512.png" class="w-6 h-6 absolute left-[-35px] top-[74%] transform -translate-y-1/2" alt="">
+                        <label for="">Set a strong password</label>
+                        <input type="password" placeholder="••••••••" class="w-full p-3 mt-2  bg-gray-200 outline-none focus:ring-2 focus:ring-zinc-400">
+                        
+                        <div class="flex items-center">
+                                <a href="#" class="text-sm hover:text-zinc-500 font-medium">Forget Password</a>
+                        </div>
+            
+                        <button type="submit"  class="w-full bg-gray-500 text-white p-3  hover:bg-gray-600 cursor-pointer">
+                            Sign Up
+                        </button>
+                    </form>
+                    <a class="text-center cursor-pointer text-sm hover:text-zinc-500 font-medium" href="./login.php">Login</a>
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

@@ -51,6 +51,30 @@ echo $newText; // Output: Hello PHP! Welcome to the PHP!
 echo "\nReplacements made: " . $count; // Output: 2
 ?>
 
+<!-- 
+Write a PHP script to get the last three characters of a string.
+Sample String : 'rayy@example.com'
+Expected Output : 'com' -->
+<?php
+$str="rayy@example.com";
+$substr=substr($str,-3);
+echo $substr;
+?>
+
+<?php
+for ($i = 97; $i <= 122; $i++) { // ASCII values for 'a' to 'z'
+    echo chr($i);
+}
+?>
+
+
+<?php
+$str = "082307";
+$formattedTime = substr($str, 0, 2) . ":" . substr($str, 2, 2) . ":" . substr($str, 4, 2);
+
+echo $formattedTime;
+?>
+
 
 <!-- convert an array into a key-value pair associative array. -->
 <?php
@@ -107,3 +131,66 @@ array_merge()	Merges multiple arrays into one
 count()	Counts total elements in an array
 array_count_values()	Counts occurrences of each value in an array
 array_reverse()	Reverses the array order -->
+
+
+<!-- Take input of 2d array from user run the loop & print the element with for each loop -->
+<?php
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+$size = count($matrix); 
+for ($i = 0; $i < $size; $i++) {
+    foreach ($matrix[$i] as $value) {
+        echo $value . " ";
+    }
+    echo "\n";
+}
+
+?>
+
+<?php
+//Apply operation on the above matrix and make each element 2x
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+$size = count($matrix);
+for ($i = 0; $i < $size; $i++) {
+    for ($j = 0; $j < $size; $j++) {
+        $matrix[$i][$j] *= 2;
+    }
+}
+
+for ($i = 0; $i < $size; $i++) {
+    foreach ($matrix[$i] as $value) {
+        echo $value . " ";
+    }
+    echo "\n";
+}
+?>
+
+<?php
+
+//Add a to each element of the matrix
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+$size = count($matrix);
+for ($i = 0; $i < $size; $i++) {
+    for ($j = 0; $j < $size; $j++) {
+        $matrix[$i][$j] += 9;
+    }
+}
+for ($i = 0; $i < $size; $i++) {
+    foreach ($matrix[$i] as $value) {
+        echo $value . " ";
+    }
+    echo "\n";
+}
+?>
