@@ -1,5 +1,29 @@
 <?php
+session_start();
+include('../actions/connect.php');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    // Insert user into the database
+    $sql = "INSERT INTO user_register (regname, user_name, email, password) VALUES ('$name', '$username', '$email', '$password')";
+
+    // Execute query
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        // Store the user's ID in the session
+        $_SESSION['user_id'] = mysqli_insert_id($conn);
+        echo '<script>alert("Registration Successful"); window.location.href="../src/intro.php";</script>';
+    } else {
+        echo '<script>alert("Registration Failed"); window.location.href="../src/signup.php";</script>';
+    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -28,7 +52,7 @@
                             One step closer to an organized life—get started!
                         </h2>
                     </div>
-                    <form class="space-y-4 relative" action="../actions/reg_back.php" method="POST">
+                    <form class="space-y-4 relative" action="./signup.php" method="POST">
                         <img src="https://em-content.zobj.net/source/apple/391/waving-hand_1f44b.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[12%] transform -translate-y-1/2">
                         <label for="" >What’s your good name?</label>
                         <input type="text" name="name" placeholder="John Doe" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">

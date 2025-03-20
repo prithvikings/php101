@@ -1,4 +1,35 @@
 <?php
+session_start();
+include('../actions/connect.php');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Fetch user from the database
+    $sql = "SELECT * FROM user_register WHERE user_name = '$username'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+
+        // Verify the password
+        if (password_verify($password, $user['password'])) {
+            // Store user information in the session
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_name'] = $user['user_name'];
+            $_SESSION['email'] = $user['email'];
+
+            // Redirect to dashboard
+            header("Location: ../src/dashboard.php");
+            exit();
+        } else {
+            echo '<script>alert("Invalid Password"); window.location.href="../src/login.php";</script>';
+        }
+    } else {
+        echo '<script>alert("Invalid Username"); window.location.href="../src/login.php";</script>';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +60,7 @@
                         </h2>
                         <img src="https://em-content.zobj.net/source/apple/391/smiling-face-with-sunglasses_1f60e.png" alt="" class="w-7 h-7 absolute left-28 top-[60%] transform -translate-y-1/2">
                     </div>
-                    <form class="space-y-4 relative" action="../actions/login_back.php" method="POST">
+                    <form class="space-y-4 relative" action="./login.php" method="POST">
                         <img src="https://em-content.zobj.net/source/apple/391/technologist-light-skin-tone_1f9d1-1f3fb-200d-1f4bb.png" alt="" class="absolute w-7 h-7 left-[-35px] top-[10%] transform -translate-y-1/2">
                         <input type="text" name="username" placeholder="Username" class="w-full p-3 bg-gray-100 outline-none focus:ring-2 focus:ring-zinc-400">
                         <img src="https://em-content.zobj.net/source/apple/391/zipper-mouth-face_1f910.png" alt="" class="absolute w-7 h-7 left-[-35px] top-[42%] transform -translate-y-1/2">
