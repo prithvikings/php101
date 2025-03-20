@@ -289,15 +289,23 @@
           <div class="text-4xl font-semibold font-[gilroy] text-gray-800">
             Subscribe to learn about our latest news
           </div>
-          <div class="flex items-start">
-            <input type="email" placeholder="Enter your email" class="border-b border-gray-400 py-1 px-32 focus:outline-none placeholder-gray-500 pl-0">
-            <button class="ml-2 text-gray-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7M4 12H21" />
+          <form action="../actions/sent.php" method="post" class="flex items-start">
+            <input type="email" name="email" placeholder="Enter your email"
+              class="border-b border-gray-400 py-1 px-32 focus:outline-none placeholder-gray-500 pl-0">
+            <button type="submit" class="ml-2 text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7M4 12H21" />
               </svg>
             </button>
-          </div>
+          </form>
         </div>
+        <?php
+        if (isset($_GET['subscription']) && $_GET['subscription'] === 'success') {
+          echo '<p style="color: green;" class="text-xl font-light">Thank you for subscribing! A confirmation email has been sent.</p>';
+        }
+        ?>
       </div>
     </section>
 
