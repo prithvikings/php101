@@ -25,27 +25,27 @@
         class="w-full flex justify-between items-center px-32 py-5 bg-zinc-900"
       >
         <div class="logo">
-          <h1 class="text-4xl font-[mulish] leading-none tracking-[5px]">
+          <h1 class="text-4xl font-[mulish] leading-none tracking-[4px]">
             Notifi
           </h1>
         </div>
         <div
           class="text flex items-center gap-8 text-lg font-normal font-[gilroy]"
         >
-          <a href="./index.php" class="cursor-pointer no-underline hover:text-[#a0e987]">Home</a>
+          <a href="./index.php" class="cursor-pointer no-underline hover:text-[#e0614a]">Home</a>
           <a
             href="./blogs.php"
-            class="cursor-pointer no-underline text-[#a0e987]"
+            class="cursor-pointer no-underline text-[#e0614a]"
             >Blogs</a
           >
-          <h1 class="cursor-pointer hover:text-[#a0e987]">Extension</h1>
-          <h1 class="cursor-pointer hover:text-[#a0e987]">Features</h1>
-          <a href="./about.php" class="cursor-pointer no-underline hover:text-[#a0e987]">About</a>
+          <h1 class="cursor-pointer hover:text-[#e0614a]">Extension</h1>
+          <h1 class="cursor-pointer hover:text-[#e0614a]">Features</h1>
+          <a href="./about.php" class="cursor-pointer no-underline hover:text-[#e0614a]">About</a>
         </div>
         <div class="btn">
           <a
           href="./login.php"
-            class="no-underline rounded-full border-none px-10 py-2 flex items-center justify-center bg-[#9fe887] text-black font-semibold hover:bg-[white] cursor-pointer transition-colors duration-300 ease-in-out"
+            class="no-underline rounded-full border-none px-10 py-2 flex items-center justify-center bg-[#e0614a] hover:bg-[#c95844]  text-whit font-semibold cursor-pointer transition-colors duration-300 ease-in-out"
           >
             Login
         </a>

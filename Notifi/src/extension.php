@@ -1,7 +1,3 @@
-<?php
-?>
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -33,9 +29,9 @@
         >
           <a class=" cursor-pointer hover:text-[#e0614a]" href="./index.php">Home</a>
           <a class="cursor-pointer no-underline hover:text-[#e0614a]" href="./blogs.php">Blogs</a>
-          <h1 class="cursor-pointer hover:text-[#e0614a]">Extension</h1>
+          <h1 class="cursor-pointer text-[#e0614a]">Extension</h1>
           <h1 class="cursor-pointer hover:text-[#e0614a]">Features</h1>
-          <h1 class="cursor-pointer text-[#e0614a]">About</h1>
+          <h1 class="cursor-pointer hover:text-[#e0614a]">About</h1>
         </div>
         <div class="btn">
           <a
@@ -46,37 +42,59 @@
         </a>
         </div>
       </nav>
-        <div class="w-full flex flex-col items-start  px-36 py-18">
-            <h1 class="text-6xl font-semibold text-zinc-800 ">About</h1>
-            <p class="text-zinc-800 w-3xl text-xl tracking-wider mt-5">Welcome to <span class="text-black font-semibold italic">Notifi</span>, your ultimate companion for staying organized, on time, and stress-free!
-
-                We know how easy it is to forget important tasks, miss deadlines, or let reminders pile up. That’s why we created a smart, intuitive, and hassle-free way to manage your schedule. Whether it’s setting alarms for daily routines, planning future tasks, or getting timely notifications—we make sure you never miss a beat.</p>
+        <div class="w-full flex flex-col items-start  px-36 pt-18 pb-12">
+            <h1 class="text-4xl font-bold font-[gilroy] text-zinc-800 ">Download & Supercharge Your Productivity with Our Extension!</h1>
+            <h1 class="text-xl font-medium mt-2 italic font-[gilroy] text-zinc-800 ">Never Miss a Task Again – Right from Your Browser!</h1>
+            <p class="text-zinc-800 w-3xl text-lg tracking-wide mt-5">Say goodbye to forgotten deadlines and last-minute rushes! Our <span class="text-black font-semibold italic">Notifi</span> Chrome extension keeps your tasks, alarms, and reminders just a click away.</p>
         </div>
 
         <div class="w-full flex flex-col items-start  px-36 pb-18">
-            <h1 class="text-6xl font-semibold text-zinc-800">Why Choose Us?</h1>
+            <div class="flex items-center gap-5">
+                <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Seamless Task Scheduling</span> – Set reminders directly from your browser.</h3>
+            </div>
+            <div class="flex items-center gap-5 mt-2">
+                <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Quick Access</span> – No complicated setup, just effortless task management.</h3>
+            </div>
+            <div class="flex items-center gap-5 mt-2">
+                <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Smart Notifications</span> – Choose how and when you want to be reminded.</h3>
+            </div>
+            <div class="flex items-center gap-5 mt-2">
+                <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Sync Across Devices</span> – Your data stays private, and your tasks stay safe.</h3>
+            </div>
+        </div>
+
+
+        <div class="w-full flex flex-col items-start  px-36 pb-8">
+            <h1 class="text-5xl font-medium text-zinc-800 font-[gilroy]">How to Get Started?</h1>
             <div class="flex items-center gap-5 mt-5">
                 <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
-            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Smart Scheduling</span> – Get reminders exactly when you need them.</h3>
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide">Download the Extension Code from our GitHub repository.</h3>
             </div>
             <div class="flex items-center gap-5 mt-2">
                 <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
-            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Simple & Intuitive</span> – No complicated setup, just effortless task management.</h3>
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide">Open Chrome → Extensions and enable Developer Mode (top right corner).</h3>
             </div>
             <div class="flex items-center gap-5 mt-2">
                 <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
-            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Custom Alerts</span> – Choose how and when you want to be reminded.</h3>
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide">Click "Load Unpacked" and select the downloaded extension folder.</h3>
             </div>
             <div class="flex items-center gap-5 mt-2">
                 <img class="w-8 h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
-            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Secure & Reliable</span> – Your data stays private, and your tasks stay safe.</h3>
+            <h3 class="text-xl font-semibold text-zinc-700 mb-1 mt-2 tracking-wide"><span class="font-bold text-zinc-900">Pin the Extension for quick access and start scheduling your tasks!</h3>
             </div>
         </div>
-        <div class="w-full flex flex-col items-start  px-36 pb-18">
-            <h1 class="font-semibold text-xl text-zinc-800">At <span class="font-bold text-zinc-900 italic">Notifi</span>, we don’t just help you remember tasks—we help you stay ahead.</h1>
+        <div class="w-full flex px-36 pb-4">
+            <a href="#"class="font-bold text-xl flex items-center gap-4 text-blue-500"><i class="ri-link text-md text-blue-500"></i>Download from GitHub</a>
         </div>
+        <div class="w-full flex px-36 pb-18 text-zinc-700 text-xl font-medium italic gap-2">
+                    <p>Because remembering everything is overrated—let us do it for you!</p>
+            <img src="https://em-content.zobj.net/source/apple/391/smiling-face-with-sunglasses_1f60e.png" class="w-8 h-8" alt="">
 
-
+    </div>
         <footer class="bg-[#18181B] text-white pt-12 pb-2 px-4 w-full">
             <div class=" flex justify-around">
           

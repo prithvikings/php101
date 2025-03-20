@@ -79,10 +79,10 @@ $user_details = mysqli_fetch_assoc($result_details);
   <body>
     <main class="bg-[#1E1E2E] min-h-screen w-full text-white font-[mulish] text-[#E4E4E7] relative">
       <!-- Logout and Fine-Tune Buttons -->
-      <a href="#" class="absolute right-10 top-5 px-4 py-2 bg-[#e0614a] hover:bg-[#c95844] rounded-sm font-medium">
+      <a href="../actions/logout.php" class="absolute right-10 top-5 px-4 py-2 bg-[#e0614a] hover:bg-[#c95844] rounded-sm font-medium">
         Logout <i class="ri-logout-box-r-line text-white text-lg"></i>
       </a>
-      <a href="#" class="absolute right-40 top-5 px-4 py-2 bg-[#e0614a] hover:bg-[#c95844] rounded-sm font-medium flex items-center justify-center gap-2">
+      <a href="./edit.php" class="absolute right-40 top-5 px-4 py-2 bg-[#e0614a] hover:bg-[#c95844] rounded-sm font-medium flex items-center justify-center gap-2">
         Fine-Tune <i class="ri-user-settings-line text-white text-lg"></i>
       </a>
 
@@ -90,7 +90,7 @@ $user_details = mysqli_fetch_assoc($result_details);
       <div class="w-full p-4 pt-10 pl-12 rounded-sm flex flex-col justify-start items-start gap-4">
         <div class="w-full flex gap-2 items-center">
           <img src="https://em-content.zobj.net/source/apple/391/kissing-face-with-closed-eyes_1f61a.png" class="w-7 h-7" alt="">
-          <h1 class="text-xl font-normal font-[gilroy]">Hey Aditya, ready to conquer your day?</h1>
+          <h1 class="text-xl font-normal font-[gilroy]">Hey <?php echo htmlspecialchars($user['user_name']); ?>, ready to conquer your day?</h1>
         </div>
         <p class="text-sm w-1/4 italic font-light">
           Your greatest asset is your earning ability. Your greatest resource is your time.
@@ -108,8 +108,9 @@ $user_details = mysqli_fetch_assoc($result_details);
 
       <!-- Add Task Section -->
       <div class="w-full flex flex-col gap-4 items-start justify-start p-4 pt-5 pl-12">
-        <h1 class="text-xl font-semibold font-[gilroy]">No last-minute rush, Aditya! Here’s what’s coming up. 🚀</h1>
-
+        <div class="w-full flex items-center gap-5">
+        <h1 class="text-xl font-semibold font-[gilroy]">No last-minute rush, <?php echo htmlspecialchars($user['user_name']); ?>! Here’s what’s coming up. </h1>
+        <img src="https://em-content.zobj.net/source/apple/391/raising-hands_medium-light-skin-tone_1f64c-1f3fc_1f3fc.png" class="w-8 h-8" alt=""></div>
         <!-- Add Task Input -->
         <div class="w-full max-w-2xl">
           <div class="flex gap-2">
@@ -184,90 +185,68 @@ $user_details = mysqli_fetch_assoc($result_details);
       let currentTaskIndex = null;
 
       // Function to add a new task
-      async function addTask() {
-    const taskInput = document.getElementById('taskInput');
-    const taskTime = document.getElementById('taskTime');
-    const taskPriority = document.getElementById('taskPriority');
-    const taskCategory = document.getElementById('taskCategory');
-    const taskText = taskInput.value.trim();
-    const time = taskTime.value;
-    const priority = taskPriority.value;
-    const category = taskCategory.value;
+      function addTask() {
+        const taskInput = document.getElementById('taskInput');
+        const taskTime = document.getElementById('taskTime');
+        const taskPriority = document.getElementById('taskPriority');
+        const taskCategory = document.getElementById('taskCategory');
+        const taskText = taskInput.value.trim();
+        const time = taskTime.value;
+        const priority = taskPriority.value;
+        const category = taskCategory.value;
 
-    if (taskText === "") {
-        alert("Please enter a task!");
-        return;
-    }
+        if (taskText === "") {
+          alert("Please enter a task!");
+          return;
+        }
 
-    const response = await fetch('../actions/add_task.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ task_text: taskText, task_time: time, task_priority: priority, task_category: category })
-    });
-
-    const result = await response.json();
-    if (result.success) {
-        renderTasks(); // Refresh the task list
+        // Add task to the list
+        tasks.push({ text: taskText, time, priority, category, completed: false });
+        filterTasks(currentCategory);
         taskInput.value = ""; // Clear input
-    } else {
-        alert("Failed to add task.");
-    }
-}
+      }
 
-      // Fetch tasks from the backend
-async function fetchTasks() {
-    const response = await fetch('../actions/fetch_tasks.php');
-    const tasks = await response.json();
-    return tasks;
-}
+      // Function to render tasks
+      function renderTasks(filteredTasks) {
+        const taskList = document.getElementById('taskList');
+        taskList.innerHTML = ""; // Clear existing tasks
 
-// Render tasks on the page
-async function renderTasks() {
-    const tasks = await fetchTasks();
-    const taskList = document.getElementById('taskList');
-    taskList.innerHTML = ""; // Clear existing tasks
+        filteredTasks.forEach((task, index) => {
+          const taskElement = document.createElement('div');
+          taskElement.className = "flex items-center justify-between p-2 bg-[#2D2D42] rounded-sm mb-2";
 
-    tasks.forEach((task, index) => {
-        const taskElement = document.createElement('div');
-        taskElement.className = "flex items-center justify-between p-2 bg-[#2D2D42] rounded-sm mb-2";
-
-        // Task text, time, priority, and category
-        taskElement.innerHTML = `
+          // Task text, time, priority, and category
+          taskElement.innerHTML = `
             <div class="flex items-center gap-2">
-                <input
-                    type="checkbox"
-                    onchange="toggleTask(${task.id})"
-                    ${task.completed ? "checked" : ""}
-                    class="form-checkbox h-5 w-5 text-[#E0614A] rounded-sm"
-                />
-                <span class="${task.completed ? "line-through text-gray-400" : "text-white"}">
-                    ${task.text} <span class="text-sm text-gray-400">(${task.time}, ${task.priority}, ${task.category})</span>
-                </span>
+              <input
+                type="checkbox"
+                onchange="toggleTask(${tasks.indexOf(task)})"
+                ${task.completed ? "checked" : ""}
+                class="form-checkbox h-5 w-5 text-[#E0614A] rounded-sm"
+              />
+              <span class="${task.completed ? "line-through text-gray-400" : "text-white"}">
+                ${task.text} <span class="text-sm text-gray-400">(${task.time}, ${task.priority}, ${task.category})</span>
+              </span>
             </div>
             <div class="flex gap-2">
-                <button onclick="snoozeTask(${task.id})" class="text-gray-400 hover:text-white">
-                    <i class="ri-time-line"></i>
-                </button>
-                <button onclick="rescheduleTask(${task.id})" class="text-gray-400 hover:text-white">
-                    <i class="ri-calendar-todo-line"></i>
-                </button>
-                <button onclick="editTask(${task.id})" class="text-gray-400 hover:text-white">
-                    <i class="ri-edit-line"></i>
-                </button>
-                <button onclick="deleteTask(${task.id})" class="text-gray-400 hover:text-white">
-                    <i class="ri-delete-bin-line"></i>
-                </button>
+              <button onclick="snoozeTask(${tasks.indexOf(task)})" class="text-gray-400 hover:text-white">
+                <i class="ri-time-line"></i>
+              </button>
+              <button onclick="rescheduleTask(${tasks.indexOf(task)})" class="text-gray-400 hover:text-white">
+                <i class="ri-calendar-todo-line"></i>
+              </button>
+              <button onclick="editTask(${tasks.indexOf(task)})" class="text-gray-400 hover:text-white">
+                <i class="ri-edit-line"></i>
+              </button>
+              <button onclick="deleteTask(${tasks.indexOf(task)})" class="text-gray-400 hover:text-white">
+                <i class="ri-delete-bin-line"></i>
+              </button>
             </div>
-        `;
+          `;
 
-        taskList.appendChild(taskElement);
-    });
-}
-
-// Initial render
-renderTasks();
+          taskList.appendChild(taskElement);
+        });
+      }
 
       // Function to filter tasks by category
       function filterTasks(category) {
@@ -277,22 +256,10 @@ renderTasks();
       }
 
       // Function to toggle task completion
-      async function toggleTask(taskId) {
-    const response = await fetch('../actions/update_task.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ task_id: taskId, completed: 1 })
-    });
-
-    const result = await response.json();
-    if (result.success) {
-        renderTasks(); // Refresh the task list
-    } else {
-        alert("Failed to update task.");
-    }
-}
+      function toggleTask(index) {
+        tasks[index].completed = !tasks[index].completed;
+        filterTasks(currentCategory);
+      }
 
       // Function to snooze a task
       function snoozeTask() {
@@ -318,45 +285,21 @@ renderTasks();
       }
 
       // Function to edit a task
-      async function editTask(taskId) {
-    const newText = prompt("Edit your task:");
-    if (newText !== null && newText.trim() !== "") {
-        const response = await fetch('../actions/update_task.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ task_id: taskId, task_text: newText.trim() })
-        });
-
-        const result = await response.json();
-        if (result.success) {
-            renderTasks(); // Refresh the task list
-        } else {
-            alert("Failed to update task.");
+      function editTask(index) {
+        const newText = prompt("Edit your task:", tasks[index].text);
+        if (newText !== null && newText.trim() !== "") {
+          tasks[index].text = newText.trim();
+          filterTasks(currentCategory);
         }
-    }
-}
+      }
 
       // Function to delete a task
-      async function deleteTask(taskId) {
-    if (confirm("Are you sure you want to delete this task?")) {
-        const response = await fetch('../actions/delete_task.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ task_id: taskId })
-        });
-
-        const result = await response.json();
-        if (result.success) {
-            renderTasks(); // Refresh the task list
-        } else {
-            alert("Failed to delete task.");
+      function deleteTask(index) {
+        if (confirm("Are you sure you want to delete this task?")) {
+          tasks.splice(index, 1);
+          filterTasks(currentCategory);
         }
-    }
-}
+      }
 
       // Function to check task times and play notification sound
       function checkTaskTimes() {
@@ -401,7 +344,7 @@ renderTasks();
           const prompt = `Analyze the following tasks and provide a summary or suggestions for better productivity:\n${taskList}`;
 
           // Call the Gemini API
-          const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDecTU1dLlUL5RrEifrnnIcKZt5epEYOa8', {
+          const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=yourapikey', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -428,6 +371,6 @@ renderTasks();
 
       // Initial render
       filterTasks(currentCategory);
-    </script>
+    </script>    
   </body>
 </html>

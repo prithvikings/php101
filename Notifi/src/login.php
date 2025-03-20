@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="./index.php" class="absolute text-3xl text-black top-8 right-10">
             <i class="ri-close-line"></i>
             </a>
-                <div class="bg-white p-12 rounded-md w-96 flex flex-col gap-4 text-gray-700">
+                <div class="bg-white p-12 rounded-md w-96 flex flex-col shadow-lg shadow-gray-400 gap-4 text-gray-700">
                     <div class="w-full flex items-center relative">
                         <h2 class="text-xl font-semibold font-[gilroy] text-gray-800 mb-4">
                             Welcome back! Your tasks missed you.
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <a href="#" class="text-sm hover:text-zinc-500 font-medium">Forget Password</a>
                         </div>
             
-                        <button type="submit" class="w-full bg-gray-500 text-white p-3  hover:bg-gray-600 cursor-pointer">
+                        <button type="submit" class="w-full bg-[#dd6c59] hover:bg-[#c95844]  text-white p-3 cursor-pointer">
                             Login
                         </button>
                     </form>
