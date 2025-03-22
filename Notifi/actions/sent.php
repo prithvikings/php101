@@ -21,21 +21,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         //Server settings
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = ''; // Your Gmail address
-        $mail->Password   = ''; // Your App Password
+        $mail->Host     = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'prithvi07raj07@gmail.com'; // Your Gmail address
+        $mail->Password = 'qdttzmsosoqqthiu'; // Your App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
+        $mail->Port     = 465;
 
         //Recipients
-        $mail->setFrom('', 'Your Newsletter Service'); // Your Gmail and Name
+        $mail->setFrom('prithvi07raj07@gmail.com', 'Your Newsletter Service'); // Corrected line
         $mail->addAddress($email, ''); // Send to the user's email
 
         //Content
         $mail->isHTML(true);
         $mail->Subject = 'Thank you for subscribing to our newsletter!';
-        $mail->Body    = '
+        $mail->Body     = '
             <p>Dear Subscriber,</p>
             <p>Thank you for subscribing to our newsletter! You will now receive weekly updates from us.</p>
             <p>Best regards,</p>
@@ -43,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ';
 
         $mail->send();
-        // Removed echo here
         header("Location: ../src/index.php?subscription=success"); //added a get param to indicate success
         exit;
 

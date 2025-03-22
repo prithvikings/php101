@@ -38,22 +38,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </head>
   <body>
     <main class="bg-zinc-900 w-full min-h-screen text-white font-[mulish]">
-        <div class="w-full bg-amber-400 flex justify-between items-center h-screen">
-            <div class="img w-3/5 bg-sky-500 h-full">
+        <div class="w-full bg-zinc-300 flex justify-between items-center h-screen ">
+            <div class="img w-0 md:w-3/5 bg-sky-500 h-full">
                 <img src="../assets/login_bg_pattern_2.jpg" alt="" class="w-full h-full object-cover">
             </div>
-            <div class="container-div w-full bg-zinc-300 h-full flex items-center justify-start px-32 relative">
-                <a href="./index.php" class=" text-3xl text-black absolute top-8 right-10">
+            <div class="container-div w-full bg-zinc-300 h-full flex items-center justify-start px-6 py-12 md:py-0 md:px-32 relative">
+                <a href="./index.php" class=" text-3xl text-black absolute top-2 right-4 md:top-8 md:right-10">
                     <i class="ri-close-line"></i>
                 </a>
-                <div class="bg-white p-12 pl-16 rounded-md w-xl flex flex-col gap-4 text-gray-700">
+                <div class="bg-white mt-12 md:mt-0 p-8 pl-10 md:p-12 md:pl-16 rounded-md w-2xl md:w-xl flex flex-col gap-4 text-gray-700">
                     <div class="w-full flex items-center relative">
                         <h2 class="text-xl font-semibold font-[gilroy] text-gray-800 mb-4">
                             One step closer to an organized life—get started!
                         </h2>
                     </div>
                     <form class="space-y-4 relative" action="./signup.php" method="POST">
-                        <img src="https://em-content.zobj.net/source/apple/391/waving-hand_1f44b.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[12%] transform -translate-y-1/2">
+                        <img src="https://em-content.zobj.net/source/apple/391/waving-hand_1f44b.png" alt="" class=" w-6 h-6 absolute left-[-35px] top-[12%] transform -translate-y-1/2">
                         <label for="" >What’s your good name?</label>
                         <input type="text" name="name" placeholder="John Doe" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
                         <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" alt="" class="w-6 h-6 absolute left-[-35px] top-[34%] transform -translate-y-1/2">

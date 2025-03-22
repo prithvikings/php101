@@ -46,14 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <body>
     <main class="bg-zinc-900 w-full min-h-screen text-white font-[mulish]">
         <div class="w-full bg-amber-400 flex justify-between items-center h-screen">
-            <div class="img w-3/5 bg-sky-500 h-full">
+            <div class="img w-0 md:w-3/5 bg-sky-500 h-full hidden md:block">
                 <img src="../assets/login_bg_pattern_3.jpg" alt="" class="w-full h-full object-cover">
             </div>
-            <div class="container-div w-full bg-zinc-300 h-full flex items-center justify-start px-32 relative">
-            <a href="./index.php" class="absolute text-3xl text-black top-8 right-10">
+            <div class="container-div w-full bg-zinc-300 h-full flex items-center justify-start px-16 md:px-32 relative">
+            <a href="./index.php" class="absolute text-2xl md:text-3xl text-black top-8 right-10">
             <i class="ri-close-line"></i>
             </a>
-                <div class="bg-white p-12 rounded-md w-96 flex flex-col shadow-lg shadow-gray-400 gap-4 text-gray-700">
+                <div class="bg-white p-12 md:p-12 rounded-md w-screen md:w-96 flex flex-col shadow-lg shadow-gray-400 gap-4 text-gray-700">
                     <div class="w-full flex items-center relative">
                         <h2 class="text-xl font-semibold font-[gilroy] text-gray-800 mb-4">
                             Welcome back! Your tasks missed you.
