@@ -1,0 +1,63 @@
+<?php
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-clifford: #da373d;
+        }
+
+        @layer utilities {
+            .backdrop-blur-navbar {
+                @apply bg-zinc-800/80 backdrop-blur-md shadow-md;
+            }
+
+            .nav-hidden {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-['Mulish']">
+    <main
+        class="bg-[#f9fafb] w-full flex flex-col items-center justify-start text-gray-300 min-h-screen"
+    >
+        <nav class="px-4 py-5 md:px-48 flex justify-between items-center w-full bg-[#f9fafb] fixed top-0 z-50 border-b-2 border-gray-100 text-md">
+            <div class="flex items-center space-x-16 text-gray-500 text-md font-medium">
+                <h1>Logo</h1>
+                <h1>About us</h1>
+                <h1>Waitlist</h1>
+            </div>
+            <div class="flex items-center space-x-4 text-gray-500 gap-4">
+                <select name="language" id="language" class="border rounded-md px-2 py-1">
+                    <option value="hindi">Hindi</option>
+                    <option value="english">English</option>
+                </select>
+                <button class="px-6 py-1 bg-[#4d9d7f] rounded-md text-white font-semibold text-md hover:bg-[#59a288] cursor-pointer">contact</button>
+            </div>
+        </nav>
+
+        <section class="w-full flex flex-col md:flex-row p-8 md:p-10  items-center justify-start h-[96vh]">
+            <div class="gap-6 flex flex-col items-start justify-center">
+                <div class="text-[#227b5e] bg-[#e9fcf5] w-fit px-3 font-semibold py-1 rounded-3xl">India's Own Laser Weeder</div>
+                <h1 class="text-black text-5xl font-bold">RAक्षक - Laser Weeder</h1>
+                <p class="text-gray-500 font-[gilroy] tracking-tight text-xl font-medium">Engineered in India, for Indian farms, for Indian Tractors.</p>
+                <div class="px-6 py-4 bg-[#4d9d7f] text-white font-semibold rounded-lg">Learn More in 2 Mins</div>
+            </div>
+            <div></div>
+        </section>
+    </main>
+</body>
+</html>
