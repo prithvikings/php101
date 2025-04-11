@@ -48,11 +48,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </a>
                 <div class="bg-white mt-12 md:mt-0 p-8 pl-10 md:p-12 md:pl-16 rounded-md w-2xl md:w-xl flex flex-col gap-4 text-gray-700">
                     <div class="w-full flex items-center relative">
-                        <h2 class="text-xl font-semibold font-[gilroy] text-gray-800 mb-4">
+                        <h2 class="text-xl font-semibold font-[gilroy] text-gray-800 mb-4 reg-elem ">
                             One step closer to an organized life—get started!
                         </h2>
                     </div>
-                    <form class="space-y-4 relative" action="./signup.php" method="POST">
+                    <form class="space-y-4 relative reg-elem" action="./signup.php" method="POST">
                         <img src="https://em-content.zobj.net/source/apple/391/waving-hand_1f44b.png" alt="" class=" w-6 h-6 absolute left-[-35px] top-[12%] transform -translate-y-1/2">
                         <label for="" >What’s your good name?</label>
                         <input type="text" name="name" placeholder="John Doe" class="w-full p-3 bg-gray-200 mt-2 outline-none focus:ring-2 focus:ring-zinc-400">
@@ -66,18 +66,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="">Set a strong password</label>
                         <input type="password" name="password" placeholder="••••••••" class="w-full p-3 mt-2  bg-gray-200 outline-none focus:ring-2 focus:ring-zinc-400">
                         
-                        <div class="flex items-center">
+                        <div class="flex items-center reg-elem">
                                 <a href="#" class="text-sm hover:text-zinc-500 font-medium">Forget Password</a>
                         </div>
             
-                        <button type="submit"  class="w-full bg-gray-500 text-white p-3  hover:bg-gray-600 cursor-pointer">
+                        <button type="submit"  class="w-full bg-gray-500 text-white p-3  hover:bg-gray-600 cursor-pointer reg-elem">
                             Sign Up
                         </button>
                     </form>
-                    <a class="text-center cursor-pointer text-sm hover:text-zinc-500 font-medium" href="./login.php">Login</a>
+                    <a class="text-center cursor-pointer text-sm hover:text-zinc-500 font-medium reg-elem" href="./login.php">Login</a>
                 </div>
             </div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    //GSAP Animations
+    let tl=gsap.timeline();
+
+tl.from(".reg-elem",{
+    duration:0.7,
+    opacity:0,
+    ease:"power1.out",
+    delay:0.1,
+    stagger:0.2,
+})
+</script>
   </body>
 </html>
