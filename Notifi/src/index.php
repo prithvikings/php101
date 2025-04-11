@@ -30,7 +30,7 @@
       id="navbar"
       class="w-full flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-32 py-3 md:py-4 bg-zinc-900 fixed top-0 z-50 transition-all duration-300">
       <div class="logo">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-none tracking-[2px] sm:tracking-[4px]">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-none tracking-[2px] sm:tracking-[4px] nav-title">
           Notifi
         </h1>
       </div>
@@ -42,16 +42,16 @@
       
       <div id="menu" class="hidden md:flex items-center gap-4 lg:gap-8">
         <div class="text flex flex-col md:flex-row items-center gap-4 lg:gap-8 text-base lg:text-lg font-normal">
-          <a href="./index.php" class="text-[#e0614a] cursor-pointer no-underline">Home</a>
-          <a class="cursor-pointer no-underline hover:text-[#e0614a]" href="./blogs.php">Blogs</a>
-          <a class="cursor-pointer hover:text-[#e0614a]" href="./extension.php">Extension</a>
-          <a class="cursor-pointer hover:text-[#e0614a]" href="#features">Features</a>
-          <a class="cursor-pointer no-underline hover:text-[#e0614a]" href="./About.php">About</a>
+          <a class="text-[#e0614a] cursor-pointer no-underline nav-elem" href="./index.php">Home</a>
+          <a class="cursor-pointer no-underline hover:text-[#e0614a] nav-elem" href="./blogs.php">Blogs</a>
+          <a class="cursor-pointer hover:text-[#e0614a] nav-elem" href="./extension.php">Extension</a>
+          <a class="cursor-pointer hover:text-[#e0614a] nav-elem" href="#features">Features</a>
+          <a class="cursor-pointer no-underline hover:text-[#e0614a] nav-elem" href="./About.php">About</a>
         </div>
         <div class="btn">
           <a
             href="./login.php"
-            class="no-underline rounded-full border-none px-4 py-1 sm:px-6 sm:py-2 md:px-8 md:py-2 lg:px-10 lg:py-2 flex items-center justify-center bg-[#e0614a] hover:bg-[#c95844] text-white font-semibold cursor-pointer transition-colors duration-300 ease-in-out text-sm sm:text-base">
+            class="no-underline rounded-full border-none px-4 py-1 sm:px-6 sm:py-2 md:px-8 md:py-2 lg:px-10 lg:py-2 flex items-center justify-center bg-[#e0614a] hover:bg-[#c95844] text-white font-semibold cursor-pointer transition-colors duration-300 ease-in-out text-sm sm:text-base nav-elem">
             Login
           </a>
         </div>
@@ -73,13 +73,13 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero w-full h-[90vh] sm:h-[95vh] md:h-[92vh] flex flex-col items-center justify-center gap-4 sm:gap-6 md:gap-8 px-4">
-      <div class="bg-[#80808033] backdrop-blur-xl px-3 py-1 sm:px-4 sm:py-2 md:px-[23px] md:py-[7px] rounded-full text-sm sm:text-md md:text-lg font-regular text-white text-center flex items-center gap-2 sm:gap-3 justify-center">
+    <section class="hero w-full h-[90vh] sm:h-[95vh] md:h-[92vh] flex flex-col items-center justify-center gap-4 sm:gap-6 md:gap-8 px-4 ">
+      <div class="bg-[#80808033] backdrop-blur-xl px-3 py-1 sm:px-4 sm:py-2 md:px-[23px] md:py-[7px] rounded-full text-sm sm:text-md md:text-lg font-regular text-white text-center flex items-center gap-2 sm:gap-3 justify-center hero-elem">
         <h1>Measure Your Minutes</h1>
         <i class="ri-alarm-fill font-extralight text-[#e0614a]"></i>
       </div>
       
-      <div class="hero-txt flex flex-col items-center justify-center gap-1 sm:gap-2">
+      <div class="hero-txt flex flex-col items-center justify-center gap-1 sm:gap-2 hero-elem">
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal text-center">
           Stay Ahead of Your Tasks
         </h1>
@@ -88,7 +88,7 @@
         </h1>
       </div>
       
-      <div class="hero-para w-full sm:w-4/5 md:w-2/3 lg:w-1/2 xl:w-1/3">
+      <div class="hero-para w-full sm:w-4/5 md:w-2/3 lg:w-1/2 xl:w-1/3 hero-elem">
         <p class="text-center text-[#787878] text-sm sm:text-base md:text-lg font-normal">
           A simple yet powerful alarm-based task scheduler that helps you
           organize your life effortlessly.
@@ -96,11 +96,11 @@
       </div>
       
       <div class="w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-2 sm:mt-4 p-2 sm:p-4">
-        <div class="rounded-full px-4 py-1 sm:px-5 sm:py-2 md:px-8 md:py-3 bg-white text-black font-semibold cursor-pointer flex items-center justify-center gap-1 sm:gap-2 hover:border-[1px] hover:border-[#ffffff3d] hover:bg-transparent hover:text-white transition-colors duration-300 ease-in-out text-xs sm:text-sm">
+        <div class="rounded-full px-4 py-1 sm:px-5 sm:py-2 md:px-8 md:py-3 bg-white text-black font-semibold cursor-pointer flex items-center justify-center gap-1 sm:gap-2 hover:border-[1px] hover:border-[#ffffff3d] hover:bg-transparent hover:text-white transition-colors duration-300 ease-in-out text-xs sm:text-sm hero-elem">
           <a href="./blogs.php">Explore Blogs</a>
           <i class="ri-news-line text-lg sm:text-xl font-extralight"></i>
         </div>
-        <div class="rounded-full px-4 py-1 sm:px-5 sm:py-2 md:px-8 md:py-3 border-[1px] border-[#ffffff3d] text-white font-semibold cursor-pointer flex items-center justify-center gap-1 sm:gap-2 hover:border-none hover:bg-white hover:text-black transition-colors duration-300 ease-in-out text-xs sm:text-sm">
+        <div class="rounded-full px-4 py-1 sm:px-5 sm:py-2 md:px-8 md:py-3 border-[1px] border-[#ffffff3d] text-white font-semibold cursor-pointer flex items-center justify-center gap-1 sm:gap-2 hover:border-none hover:bg-white hover:text-black transition-colors duration-300 ease-in-out text-xs sm:text-sm hero-elem">
           <a href="./extension.php">Get Extension</a>
           <i class="ri-briefcase-line text-lg sm:text-xl font-extralight"></i>
         </div>
@@ -116,7 +116,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="Features w-full bg-[#ffffff] text-black py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12">
+    <section id="features" class="Features w-full bg-[#ffffff] text-black py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 features-section">
       <div class="flex items-center flex-col justify-center gap-4 sm:gap-6 md:gap-8">
         <div class="start flex items-center justify-center gap-1 sm:gap-2">
           <img src="https://yenmo.in/_next/static/media/TheGoodLogo.4722a172.svg" alt="" class="h-6 w-6 sm:h-8 sm:w-8">
@@ -132,7 +132,7 @@
         <img src="https://em-content.zobj.net/source/apple/391/star-struck_1f929.png" class="object-cover w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12" alt="">
       </div>
       
-      <div class="feature-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-2 sm:px-4 md:px-8 py-6 sm:py-8 md:py-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-2 sm:px-4 md:px-8 py-6 sm:py-8 md:py-12 feature-section">
         <div class="bg-zinc-100 p-3 sm:p-4 rounded-md">
           <div class="img-first-first-box">
             <i class="ri-calendar-line text-4xl sm:text-5xl text-[#ed745f]"></i>
@@ -219,32 +219,32 @@
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-2 sm:px-4 py-6 sm:py-8 md:py-12 justify-between mt-6 sm:mt-12">
-          <div class="rounded-lg flex flex-col items-start justify-start text-start bg-zinc-100 gap-2 sm:gap-3 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+          <div class="blog-card rounded-lg flex flex-col items-start justify-start text-start bg-zinc-100 gap-2 sm:gap-3 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
             <img src="https://courses-old.ankurwarikoo.com/wp-content/uploads/2025/02/MWYC.png" alt="" class="object-cover w-full h-full rounded-lg">
             <h1 class="text-base sm:text-lg md:text-xl font-medium tracking-normal mt-1 sm:mt-2">Make Writing Your Career</h1>
             <div class="border-b-2 border-zinc-300 w-full mt-1 sm:mt-2"></div>
             <div class="flex capitalize justify-between w-full text-xs sm:text-sm">
-              <p class="font-semibold text-zinc-800">Prithvi</p>
+              <p class="font-semibold text-zinc-800">Ankur Warikoo</p>
               <p class="text-zinc-800 font-extralight">Mar 18, 2025</p>
             </div>
           </div>
           
-          <div class="rounded-lg flex flex-col items-start justify-start text-start bg-zinc-100 gap-2 sm:gap-3 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+          <div class="blog-card rounded-lg flex flex-col items-start justify-start text-start bg-zinc-100 gap-2 sm:gap-3 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
             <img src="https://courses-old.ankurwarikoo.com/wp-content/uploads/2025/02/TMFS.png" alt="" class="object-cover w-full rounded-lg">
             <h1 class="text-base sm:text-lg md:text-xl font-medium tracking-normal mt-1 sm:mt-2">Time Managment For Student</h1>
             <div class="border-b-2 border-zinc-300 w-full mt-1 sm:mt-2"></div>
             <div class="flex capitalize justify-between w-full text-xs sm:text-sm">
-              <p class="font-semibold text-zinc-800">Prithvi</p>
+              <p class="font-semibold text-zinc-800">Ankur Warikoo</p>
               <p class="text-zinc-800 font-extralight">Mar 18, 2025</p>
             </div>
           </div>
           
-          <div class="rounded-lg flex flex-col items-start justify-start text-start bg-zinc-100 gap-2 sm:gap-3 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+          <div class="blog-card rounded-lg flex flex-col items-start justify-start text-start bg-zinc-100 gap-2 sm:gap-3 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
             <img src="https://courses-old.ankurwarikoo.com/wp-content/uploads/2025/02/MWYC.png" alt="" class="object-cover w-full rounded-lg">
             <h1 class="text-base sm:text-lg md:text-xl font-medium tracking-normal mt-1 sm:mt-2">Take Charge of Your Time</h1>
             <div class="border-b-2 border-zinc-300 w-full mt-1 sm:mt-2"></div>
             <div class="flex capitalize justify-between w-full text-xs sm:text-sm">
-              <p class="font-semibold text-zinc-800">Prithvi</p>
+              <p class="font-semibold text-zinc-800">Ankur Warikoo</p>
               <p class="text-zinc-800 font-extralight">Mar 18, 2025</p>
             </div>
           </div>
@@ -376,6 +376,8 @@
       </div>
     </footer>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
     // JavaScript to handle scroll behaviors
@@ -412,6 +414,81 @@
     mobileMenuButton.addEventListener('click', function() {
       mobileMenu.classList.toggle('hidden');
     });
+
+    //GSAP Animations
+    let tl=gsap.timeline();
+
+tl.from(".nav-title",{
+    duration:0.4,
+    y: -100,
+    opacity:0,
+    ease:"power1.out",
+    delay:0.2,
+})
+tl.from(".nav-elem",{
+    duration:0.4,
+    delay:0.2,
+    opacity:0,
+    y:-50,
+    stagger:0.2,
+    ease:"power2.out"
+})
+
+tl.from(".feature-section",{
+    duration:0.5,
+    delay:0.2,
+    opacity:0,
+    y:100,
+    ease:"power1.out",
+    scrollTrigger:{
+        trigger:".feature-section",
+        start:"top 60%",
+        end:"top 40%",
+        scrub:1,
+        scroller:"body",
+    }
+})
+
+tl.from(".howworks",{
+    duration:0.5,
+    delay:0.2,
+    opacity:0,
+    x:-100,
+    ease:"power1.out",
+    scrollTrigger:{
+        trigger:".howworks",
+        start:"top 60%",
+        end:"top 40%",
+        scrub:1,
+        scroller:"body",
+    }
+})
+
+tl.from(".blog-card",{
+    duration:0.5,
+    delay:0.2,
+    opacity:0,
+    stagger:0.2,
+    ease:"power1.out",
+    scrollTrigger:{
+        trigger:".blog-card",
+        start:"top 60%",
+        end:"top 40%",
+        scrub:1,
+        scroller:"body",
+    }
+})
+
+
+gsap.from(".hero-elem",{
+    duration:1,
+    blur:0.5,
+    opacity:0,
+    ease:"power1.out",
+    delay:0.5,
+    stagger:0.2,
+
+})
   </script>
-</body>
+    </body>
 </html>

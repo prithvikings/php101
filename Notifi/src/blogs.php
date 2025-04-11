@@ -66,13 +66,13 @@
 
       <!-- Blogs Section -->
       <section class="w-full flex flex-col items-center justify-center gap-4 sm:gap-6 md:gap-8 bg-zinc-100 p-4 sm:p-6 md:p-8">
-        <div class="rounded-md bg-[#d4d4d8] p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 w-full flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 h-full text-zinc-700">
+        <div class="rounded-md bg-[#d4d4d8] p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 w-full flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 h-full text-zinc-700 blog-section">
           <div>
             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal">Blogs</h1>
           </div>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 ">
             <!-- Blog Card 1 -->
-            <div class="rounded-lg flex flex-col items-start justify-start text-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-zinc-100 gap-3 sm:gap-4 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+            <div class="blog-card rounded-lg flex flex-col items-start justify-start text-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-zinc-100 gap-3 sm:gap-4 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
               <img
                 src="https://courses-old.ankurwarikoo.com/wp-content/uploads/2025/02/MWYC.png"
                 alt=""
@@ -91,7 +91,7 @@
             </div>
             
             <!-- Blog Card 2 -->
-            <div class="rounded-lg flex flex-col items-start justify-start text-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-zinc-100 gap-3 sm:gap-4 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+            <div class="blog-card rounded-lg flex flex-col items-start justify-start text-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-zinc-100 gap-3 sm:gap-4 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
               <img
                 src="https://courses-old.ankurwarikoo.com/wp-content/uploads/2025/02/TUGTEC.png"
                 alt=""
@@ -110,7 +110,7 @@
             </div>
 
             <!-- Blog Card 3 -->
-            <div class="rounded-lg flex flex-col items-start justify-start text-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-zinc-100 gap-3 sm:gap-4 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+            <div class="blog-card rounded-lg flex flex-col items-start justify-start text-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-zinc-100 gap-3 sm:gap-4 p-2 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
               <img
                 src="https://courses-old.ankurwarikoo.com/wp-content/uploads/2025/02/TMFS.png"
                 alt=""
@@ -210,6 +210,8 @@
         </div>
       </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
       // Mobile menu toggle
@@ -219,6 +221,16 @@
       mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
       });
+
+      let tl=gsap.timeline();
+      tl.from(".blog-card",{
+        duration:1,
+        opacity:0,
+        stagger:0.2,
+        delay:0.5,
+        ease:"power3.out",
+      })
+     
     </script>
   </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-zinc-800">
+    <div class="w-full min-h-screen flex items-center justify-center flex-col gap-10">
+        <h1 id="text-elem" class="text-4xl font-bold text-zinc-200">Welcome To Hrithik Sir Classes</h1>
+        <p id="text-p" class="text-xl text-zinc-100 w-1/2 text-center"></p>
+        <div class="flex items-center justify-center gap-4">
+            <button id="btn" class="px-5 py-2 bg-red-200 text-lg font-medium hover:bg-red-300 cursor-pointer">
+                Change the Text
+            </button>
+            <button id="btn2" class="px-5 py-2 bg-red-200 text-lg font-medium hover:bg-red-300 cursor-pointer">
+                Change the Color
+            </button>
+            <button id="btn3" class="px-5 py-2 bg-red-200 text-lg font-medium hover:bg-red-300 cursor-pointer">
+                Add text
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let text = document.getElementById("text-elem");
+        let btn = document.getElementById("btn");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let textP = document.getElementById("text-p");
+        let textContent = [
+            "Welcome To Hrithik Sir Classes",
+            "Super Classes of Hrithik Sir",
+            "Best Classes in the World",
+            "Join Us Now!",
+            "Learn and Grow Together"
+        ];
+        let isTextOriginal = true;
+        let isColorOriginal = true;
+
+        btn.addEventListener("click", () => {
+            if (isTextOriginal) {
+                text.innerHTML = "Super Classes of Hrithik Sir";
+            } else {
+                text.innerHTML = "Welcome To Hrithik Sir Classes";
+            }
+            isTextOriginal = !isTextOriginal;
+        });
+
+        btn2.addEventListener("click", () => {
+            if (isColorOriginal) {
+                text.style.color = "crimson";
+            } else {
+                text.style.color = "white";
+            }
+            isColorOriginal = !isColorOriginal;
+        });
+
+        btn3.addEventListener("click",()=>{
+            textP.innerHTML=textContent;
+        })
+    </script>
+</body>
+</html>

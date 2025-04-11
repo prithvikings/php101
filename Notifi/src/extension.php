@@ -62,7 +62,7 @@
       </div>
 
       <!-- Main Content -->
-      <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pt-6 sm:pt-8 md:pt-9 lg:pt-12 pb-4 sm:pb-6 md:pb-8">
+      <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pt-6 sm:pt-8 md:pt-9 lg:pt-12 pb-4 sm:pb-6 md:pb-8 main-content-section">
           <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold md:font-bold text-zinc-800">
               Download & Supercharge Your Productivity with Our Extension!
           </h1>
@@ -75,7 +75,7 @@
       </div>
 
       <!-- Features Section -->
-      <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pb-8 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-18">
+      <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pb-8 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-18 features-section">
           <div class="flex items-center gap-3 sm:gap-4 md:gap-5">
               <img class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
               <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-zinc-700 tracking-wide">
@@ -103,7 +103,7 @@
       </div>
 
       <!-- Get Started Section -->
-      <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pb-4 sm:pb-6 md:pb-8">
+      <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pb-4 sm:pb-6 md:pb-8 get-started-section">
           <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-zinc-800">How to Get Started?</h1>
           <div class="flex items-center gap-3 sm:gap-4 md:gap-5 mt-3 sm:mt-4 md:mt-5">
               <img class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" src="https://em-content.zobj.net/source/apple/391/check-mark-button_2705.png" alt="">
@@ -197,6 +197,8 @@
         </div>
       </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
       // Mobile menu toggle
@@ -206,6 +208,28 @@
       mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
       });
+      let tl=gsap.timeline();
+      tl.from('.main-content-section',{
+        duration:0.5,
+        opacity:0,
+        stagger:0.2,
+        ease:'power3.out',
+        delay:0.5
+      })
+      tl.from('.features-section',{
+        duration:0.5,
+        opacity:0,
+        stagger:0.2,
+        ease:'power3.out',
+        delay:0.5
+      },'-=0.5')
+      tl.from('.get-started-section',{
+        duration:0.5,
+        opacity:0,
+        stagger:0.2,
+        ease:'power3.out',
+        delay:0.5
+      },'-=0.5')
     </script>
   </body>
 </html>

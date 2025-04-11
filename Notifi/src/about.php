@@ -64,7 +64,7 @@
         </div>
 
         <!-- About Content -->
-        <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 py-6 sm:py-9 md:py-12 lg:py-18">
+        <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 py-6 sm:py-9 md:py-12 lg:py-18 about-section">
             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-zinc-800">About</h1>
             <p class="text-zinc-800 w-full sm:w-4/5 md:w-3/4 lg:w-2/3 text-sm sm:text-base md:text-lg lg:text-xl tracking-wider mt-3 sm:mt-4 md:mt-5">
                 Welcome to <span class="text-black font-semibold italic">Notifi</span>, your ultimate companion for staying organized, on time, and stress-free!
@@ -73,7 +73,7 @@
         </div>
 
         <!-- Why Choose Us Section -->
-        <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pb-6 sm:pb-9 md:pb-12 lg:pb-18">
+        <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 pb-6 sm:pb-9 md:pb-12 lg:pb-18 choose-section">
             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-zinc-800">Why Choose Us?</h1>
             
             <div class="flex items-center gap-3 sm:gap-4 md:gap-5 mt-3 sm:mt-4 md:mt-5">
@@ -106,7 +106,7 @@
         </div>
         
         <!-- Final Statement -->
-        <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 py-6 sm:py-9 md:py-12 lg:pb-18">
+        <div class="w-full flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 py-6 sm:py-9 md:py-12 lg:pb-18 final-section">
             <h1 class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-zinc-800">
                 At <span class="font-bold text-zinc-900 italic">Notifi</span>, we don't just help you remember tasks—we help you stay ahead.
             </h1>
@@ -164,6 +164,8 @@
           </div>
         </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
       // Mobile menu toggle
@@ -173,6 +175,29 @@
       mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
       });
+
+      let tl=gsap.timeline();
+      tl.from('.about-section',{
+        duration:0.5,
+        opacity:0,
+        stagger:0.2,
+        ease:'power3.out',
+        delay:0.5
+      })
+      tl.from('.choose-section',{
+        duration:0.5,
+        opacity:0,
+        stagger:0.2,
+        ease:'power3.out',
+        delay:0.5
+      },'-=0.5')
+      tl.from('.final-section',{
+        duration:0.5,
+        opacity:0,
+        stagger:0.2,
+        ease:'power3.out',
+        delay:0.5
+      },'-=0.5')
     </script>
   </body>
 </html>

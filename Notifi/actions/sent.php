@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port     = 465;
 
         //Recipients
-        $mail->setFrom('prithvi07raj07@gmail.com', 'Your Newsletter Service'); // Corrected line
+        $mail->setFrom('prithvi07raj07@gmail.com', 'Your One Step towards the bright Future'); // Corrected line
         $mail->addAddress($email, ''); // Send to the user's email
 
         //Content
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Dear Subscriber,</p>
             <p>Thank you for subscribing to our newsletter! You will now receive weekly updates from us.</p>
             <p>Best regards,</p>
-            <p>The [Your Company Name] Team</p>
+            <p>The Notifi Team</p>
         ';
 
         $mail->send();
