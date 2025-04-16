@@ -3,63 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Preview</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Form with Validation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            font-family: gilroy;
+        }
+    </style>
 </head>
-<body class="bg-zinc-800">
-    <div class="w-full min-h-screen flex items-center justify-center flex-col gap-10">
-        <h1 id="text-elem" class="text-4xl font-bold text-zinc-200">Welcome To Hrithik Sir Classes</h1>
-        <p id="text-p" class="text-xl text-zinc-100 w-1/2 text-center"></p>
-        <div class="flex items-center justify-center gap-4">
-            <button id="btn" class="px-5 py-2 bg-red-200 text-lg font-medium hover:bg-red-300 cursor-pointer">
-                Change the Text
-            </button>
-            <button id="btn2" class="px-5 py-2 bg-red-200 text-lg font-medium hover:bg-red-300 cursor-pointer">
-                Change the Color
-            </button>
-            <button id="btn3" class="px-5 py-2 bg-red-200 text-lg font-medium hover:bg-red-300 cursor-pointer">
-                Add text
-            </button>
-        </div>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">Register</h1>
+        <form id="registrationForm" class="space-y-4" action="GET">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" class="p-2 bg-gray-50 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <p id="usernameError" class="text-red-500 text-sm mt-1 hidden font-medium">Username is required.</p>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700" >Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" class="p-2 bg-gray-50 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <p id="emailError" class="text-red-500 text-sm mt-1 hidden font-medium">Valid email is required.</p>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password"  placeholder="Enter password" class="p-2 bg-gray-50 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <p id="passwordError" class="text-red-500 text-sm mt-1 hidden font-medium">Password is required.</p>
+            </div>
+            <button type="submit" class="w-full font-medium bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Submit</button>
+        </form>
     </div>
 
     <script>
-        let text = document.getElementById("text-elem");
-        let btn = document.getElementById("btn");
-        let btn2 = document.getElementById("btn2");
-        let btn3 = document.getElementById("btn3");
-        let textP = document.getElementById("text-p");
-        let textContent = [
-            "Welcome To Hrithik Sir Classes",
-            "Super Classes of Hrithik Sir",
-            "Best Classes in the World",
-            "Join Us Now!",
-            "Learn and Grow Together"
-        ];
-        let isTextOriginal = true;
-        let isColorOriginal = true;
+        $(document).ready(function () {
+            $('#registrationForm').on('submit', function (e) {
+                e.preventDefault(); 
 
-        btn.addEventListener("click", () => {
-            if (isTextOriginal) {
-                text.innerHTML = "Super Classes of Hrithik Sir";
-            } else {
-                text.innerHTML = "Welcome To Hrithik Sir Classes";
-            }
-            isTextOriginal = !isTextOriginal;
+                $('.text-red-500').addClass('hidden');
+
+                let isValid = true;
+
+                const username = $('#username').val().trim();
+                if (!username) {
+                    $('#usernameError').removeClass('hidden');
+                    isValid = false;
+                }
+                const email = $('#email').val().trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email || !emailRegex.test(email)) {
+                    $('#emailError').removeClass('hidden');
+                    isValid = false;
+                }
+                const password = $('#password').val().trim();
+                if (!password) {
+                    $('#passwordError').removeClass('hidden');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                }
+            });
         });
-
-        btn2.addEventListener("click", () => {
-            if (isColorOriginal) {
-                text.style.color = "crimson";
-            } else {
-                text.style.color = "white";
-            }
-            isColorOriginal = !isColorOriginal;
-        });
-
-        btn3.addEventListener("click",()=>{
-            textP.innerHTML=textContent;
-        })
     </script>
 </body>
 </html>
