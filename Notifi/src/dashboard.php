@@ -185,13 +185,11 @@ $user_details = mysqli_fetch_assoc($result_details);
       <button onclick="snoozeTask()">Snooze</button>
     </div>
   </main>
-  <!-- JavaScript for To-Do List -->
   <script>
     let tasks = [];
     let currentCategory = 'all';
     let currentTaskIndex = null;
 
-    // Function to add a new task
     // Function to add a new task
     async function addTask() {
       const taskInput = document.getElementById('taskInput');
